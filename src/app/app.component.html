@@ -1,5 +1,8 @@
 <!-- Nav bar -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav
+  class="navbar navbar-fixed-top navbar-expand-lg bg-body-tertiary"
+  *ngIf="isRequired"
+>
   <div class="container-fluid">
     <button
       class="navbar-toggler"
@@ -20,7 +23,9 @@
           <a class="nav-link active" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Users</a>
+          <a class="nav-link active" routerLink="users" *ngIf="checkRole()"
+            >Users</a
+          >
         </li>
       </ul>
 
@@ -53,9 +58,9 @@
               >View Profile</a
             >
           </li>
-          <li><a class="dropdown-item" href="#">Dashboard</a></li>
+          <li><a class="dropdown-item" routerLink="">Dashboard</a></li>
           <li><hr class="dropdown-divider" /></li>
-          <li><a class="dropdown-item">Logout</a></li>
+          <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
         </ul>
       </div>
       <!-- End of dropdown -->

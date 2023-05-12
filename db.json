@@ -1,0 +1,36 @@
+{
+  "user": [
+    {
+      "id": "Obakeng",
+      "name": "Obakeng Pitse",
+      "password": "Obakeng@123",
+      "email": "obakeng.op@gmail.com",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "Rivaldo",
+      "name": "Rivaldo Brazil",
+      "password": "Rivaldo@123",
+      "email": "rivaldo@sports.com",
+      "role": "",
+      "isActive": false
+    },
+    {
+      "id": "Desmod",
+      "name": "Desmond McPitz",
+      "password": "Desmond@123",
+      "email": "desmond@gmail.com",
+      "role": "",
+      "isActive": false
+    },
+    {
+      "id": "BennyM",
+      "name": "Benny McCathy",
+      "password": "Benny@123",
+      "email": "benny@manu.com",
+      "role": "",
+      "isActive": false
+    }
+  ]
+}

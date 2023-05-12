@@ -17,7 +17,7 @@
                 class="img-fluid my-5"
                 style="width: 120px"
               />
-              <h5>Marie Horwitz</h5>
+              <h5>{{ user.name }}</h5>
               <p>Web Designer</p>
               <i class="far fa-edit mb-5"></i>
             </div>
@@ -48,7 +48,14 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-start">
-                  <button class="btn btn-secondary">Update details</button>
+                  <button
+                    class="btn btn-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    (click)="update()"
+                  >
+                    Update details
+                  </button>
                 </div>
               </div>
             </div>
@@ -58,3 +65,78 @@
     </div>
   </div>
 </section>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div style="background-color: yellowgreen" class="modal-header">
+        <h5
+          style="color: white; font-size: 15px"
+          class="modal-title"
+          id="exampleModalLabel"
+        >
+          UPDATE USER DATA
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Form -->
+        <form>
+          <div class="form-group mb-2">
+            <label>Enter name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="nameM"
+              placeholder="Enter name"
+            />
+          </div>
+          <div class="form-group mb-2">
+            <label>Enter email</label>
+            <input
+              type="email"
+              class="form-control"
+              formControlName="emailM"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-group mb-2">
+            <label>Enter username</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="usernameM"
+              placeholder="Enter username"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">
+            Save
+          </button>
+        </form>
+        <!-- End of form -->
+      </div>
+      <div style="background-color: yellowgreen" class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of modal -->
