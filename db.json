@@ -1,36 +1,54 @@
 {
   "user": [
     {
-      "id": "Obakeng",
-      "name": "Obakeng Pitse",
-      "password": "Obakeng@123",
-      "email": "obakeng.op@gmail.com",
-      "role": "admin",
-      "isActive": true
-    },
-    {
       "id": "Rivaldo",
       "name": "Rivaldo Brazil",
       "password": "Rivaldo@123",
       "email": "rivaldo@sports.com",
+      "title": "Java Developer",
+      "branch": "Soshanguve",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "Kagiso",
+      "name": "Kagiso Rabada",
+      "password": "Kagiso@123",
+      "email": "kagisoR@gmail.com",
+      "title": "Cricketer",
+      "branch": "Cape Town",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": "Peter",
+      "name": "Peter Parker",
+      "password": "Peter@123",
+      "email": "peterP@gmail.com",
+      "title": "Actor",
+      "branch": "Pretoria",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "Kevin",
+      "name": "Kevin Constner",
+      "password": "Kevin@123",
+      "email": "kevinK@gmail.com",
+      "title": "Actor",
+      "branch": "Hollywood",
       "role": "",
       "isActive": false
     },
     {
-      "id": "Desmod",
-      "name": "Desmond McPitz",
-      "password": "Desmond@123",
-      "email": "desmond@gmail.com",
-      "role": "",
-      "isActive": false
-    },
-    {
-      "id": "BennyM",
-      "name": "Benny McCathy",
-      "password": "Benny@123",
-      "email": "benny@manu.com",
-      "role": "",
-      "isActive": false
+      "id": "Rockey",
+      "name": "Rockey Balboa",
+      "password": "ROckey@123",
+      "email": "rockyB@gmail.com",
+      "title": "Boxer",
+      "branch": "Hollywood",
+      "role": "admin",
+      "isActive": true
     }
   ]
 }

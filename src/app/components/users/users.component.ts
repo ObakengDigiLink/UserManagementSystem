@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class UsersComponent implements OnInit {
   users: any;
+  user:any;
   id:any;
   constructor(private service:AuthService, private builder: FormBuilder, private router:Router){
 
@@ -36,13 +37,49 @@ export class UsersComponent implements OnInit {
     }
   }
 
-
-  //delete
-  deleteUser(id: string){
-    console.log("DELETE");
-    this.id = id;
-    console.log(this.id);
+  //update
+  update(id:any){
+    this.service.getByCode(this.getCurrId(id)).subscribe(res => {
+      this.user = res;
+      console.log(this.user);
+      this.updateForm.setValue({
+        id: this.user.id,
+        name: this.user.name,
+        password: this.user.password,
+        email: this.user.email,
+        title: this.user.title,
+        branch: this.user.branch,
+        role: this.user.role,
+        isActive: this.user.isActive
+      });
+    });
   }
+
+  
+  updateForm = this.builder.group({
+    id:this.builder.control('', Validators.compose([Validators.required, Validators.minLength(5)])),
+    name:this.builder.control('', Validators.required),
+    password:this.builder.control('', Validators.compose([Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{8,}')])),
+    email:this.builder.control('', Validators.compose([Validators.email, Validators.required])),
+    title:this.builder.control('', Validators.required),
+    branch:this.builder.control('', Validators.required),
+    role:this.builder.control('', Validators.required),
+    isActive:this.builder.control('', Validators.required)
+  });
+
+  confirmUpdate(){
+    console.log(this.user);
+    this.service.updateUser(this.updateForm.value.id, this.updateForm.value);
+    location.reload();
+  }
+
+
+
+  //get current ID
+  getCurrId(id: string){
+    return id;
+  }
+  //deleteUser
   confirmDelete(){
     this.service.deleteUserApi(this.id);
     location.reload();

@@ -15,12 +15,12 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">User Management System</a>
+    <a class="navbar-brand">User Management System</a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
+          <a class="nav-link active" routerLink="">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" routerLink="users" *ngIf="checkRole()"
@@ -54,9 +54,7 @@
         </button>
         <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-dark">
           <li>
-            <a class="dropdown-item" routerLink="profile" href="#"
-              >View Profile</a
-            >
+            <a class="dropdown-item" routerLink="profile">View Profile</a>
           </li>
           <li><a class="dropdown-item" routerLink="">Dashboard</a></li>
           <li><hr class="dropdown-divider" /></li>

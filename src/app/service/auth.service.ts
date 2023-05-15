@@ -22,7 +22,10 @@ export class AuthService {
   }
 
   updateUser(code: any, inputData: any){
-    return this.http.put(this.apiUrl+'/'+code, inputData);
+    return this.http.put(this.apiUrl+'/'+code, inputData).subscribe( res => {
+      this.getAll();
+      location.reload();
+    });
   }
 
   deleteUserApi(code:any){
