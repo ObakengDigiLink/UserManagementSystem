@@ -1,47 +1,57 @@
-<div class="container mt-5">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Username</th>
-        <th scope="col">Full Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Role</th>
-        <th scope="col">Job Title</th>
-        <th scope="col">Branch</th>
-        <th scope="col">Is Active?</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of users | async">
-        <td>{{ user.id }}</td>
-        <td>{{ user.name }}</td>
-        <td>{{ user.email }}</td>
-        <td>{{ role(user.role) }}</td>
-        <td>{{ user.title }}</td>
-        <td>{{ user.branch }}</td>
-        <td>{{ isActive(user.isActive) }}</td>
-        <td>
-          <button
-            class="btn btn-info"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-            (click)="update(user.id)"
-          >
-            Update</button
-          >&nbsp;
-          <button
-            class="btn btn-danger"
-            data-bs-toggle="modal"
-            data-bs-target="#deleteUser"
-            (click)="getCurrId(user.id)"
-          >
-            Delete
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="mt-5 mb-5" style="height: 2px"></div>
+<div class="container">
+  <h1>Admin Page</h1>
 </div>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-xl-12 col-md-12 col-lg-2 d-flex">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Username</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+            <th scope="col">Job Title</th>
+            <th scope="col">Branch</th>
+            <th scope="col">Is Active?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users | async">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ role(user.role) }}</td>
+            <td>{{ user.title }}</td>
+            <td>{{ user.branch }}</td>
+            <td>{{ isActive(user.isActive) }}</td>
+            <td>
+              <button
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                (click)="update(user.id)"
+                style="color: white !important"
+              >
+                Update</button
+              >&nbsp;
+              <button
+                class="btn btn-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#deleteUser"
+                (click)="getCurrId(user.id)"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="mt-lg-5 mt-xl-5" style="height: 49px"></div>
 
 <!-- Modal -->
 <div
@@ -54,7 +64,7 @@
 >
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div style="background-color: rgb(209, 153, 68)" class="modal-header">
+      <div style="background-color: #ff499e" class="modal-header">
         <h5
           style="color: white; font-size: 15px"
           class="modal-title"
@@ -117,8 +127,8 @@
         </form>
         <!-- End of form -->
       </div>
-      <div style="background-color: rgb(209, 153, 68)" class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+      <div style="background-color: #ff499e" class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
           Cancel
         </button>
       </div>
@@ -138,7 +148,7 @@
 >
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div style="background-color: rgb(209, 153, 68)" class="modal-header">
+      <div style="background-color: #ff499e" class="modal-header">
         <h5
           style="color: red; font-size: 15px"
           class="modal-title"
@@ -158,7 +168,7 @@
       <div class="modal-body">
         <h2 style="color: red">Are you sure?</h2>
       </div>
-      <div style="background-color: rgb(209, 153, 68)" class="modal-footer">
+      <div style="background-color: #ff499e" class="modal-footer">
         <button type="button" class="btn btn-danger" (click)="confirmDelete()">
           Yes
         </button>

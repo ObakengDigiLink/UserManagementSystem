@@ -1,6 +1,7 @@
 <!-- Nav bar -->
 <nav
-  class="navbar navbar-fixed-top navbar-expand-lg bg-body-tertiary"
+  class="navbar navbar-fixed-top fixed-top navbar-expand-lg"
+  style="background-color: #ff006e"
   *ngIf="isRequired"
 >
   <div class="container-fluid">
@@ -12,10 +13,11 @@
       aria-controls="navbarSupportedContent"
       aria-expanded="false"
       aria-label="Toggle navigation"
+      style="color: white"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand">User Management System</a>
+    <a class="navbar-brand" style="color: white">User Management System</a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -32,10 +34,11 @@
       <!-- Drop down -->
       <div class="btn-group">
         <button
-          class="btn btn-secondary dropdown-toggle"
+          class="btn dropdown-toggle"
           type="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
+          style="background-color: white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -52,13 +55,17 @@
             />
           </svg>
         </button>
-        <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-dark">
+        <ul
+          class="dropdown-menu dropdown-menu-lg-end"
+          style="background-color: #ff499e"
+        >
           <li>
             <a class="dropdown-item" routerLink="profile">View Profile</a>
           </li>
-          <li><a class="dropdown-item" routerLink="">Dashboard</a></li>
           <li><hr class="dropdown-divider" /></li>
-          <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+          <li>
+            <a class="dropdown-item" (click)="logout()" href="">Logout</a>
+          </li>
         </ul>
       </div>
       <!-- End of dropdown -->
@@ -66,4 +73,94 @@
   </div>
 </nav>
 <!-- End of navbar -->
+
 <router-outlet></router-outlet>
+
+<!-- Footer -->
+<footer
+  class="text-center text-lg-start bg-light text-muted lg-fixed-bottom"
+  *ngIf="isRequired"
+>
+  <!-- Section: Links  -->
+  <section class="pt-1" style="background-color: #ff499e">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>McPitz IT Solutions
+          </h6>
+          <p>
+            Affordable services that you can trust. Custom designs to meet your
+            business needs.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+          <p>
+            <a href="#!" class="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Java</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> Pretoria, GP 0001, RSA</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            obakeng@digilink.africa
+          </p>
+          <p><i class="fas fa-phone me-3"></i> +27 63 587 8009</p>
+          <p><i class="fas fa-print me-3"></i> +27 78 375 2647</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: #ff006e">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="">obakengpitse.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
