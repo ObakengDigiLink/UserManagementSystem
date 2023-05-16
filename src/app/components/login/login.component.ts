@@ -50,6 +50,8 @@ export class LoginComponent implements OnInit{
      }, (error: Response) => {
       if(error.status == 404){
         window.alert("Invalid Usernme")
+      }else{
+        window.alert("Service Temporarily Unavailable");
       }
      });
      
