@@ -37,8 +37,8 @@
       "email": "kevinK@gmail.com",
       "title": "Actor",
       "branch": "Hollywood",
-      "role": "",
-      "isActive": false
+      "role": "user",
+      "isActive": true
     },
     {
       "id": "Rockey",
@@ -67,7 +67,7 @@
       "email": "paxton@gmail.com",
       "title": "Actor",
       "branch": "Johannesburg",
-      "role": "",
+      "role": "user",
       "isActive": false
     }
   ]
