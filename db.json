@@ -49,6 +49,16 @@
       "branch": "Hollywood",
       "role": "admin",
       "isActive": true
+    },
+    {
+      "id": "Pxaton",
+      "name": "Paxton Walters",
+      "password": "Paxton@123",
+      "email": "paxton@gmail.com",
+      "title": "Actor",
+      "branch": "London",
+      "role": "admin",
+      "isActive": true
     }
   ]
 }
