@@ -10,7 +10,7 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 export class HomeComponent implements OnInit{
   
-  users:any;
+  users: any;
   
   constructor(private service: AuthService){
 

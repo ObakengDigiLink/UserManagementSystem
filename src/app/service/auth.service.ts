@@ -13,7 +13,7 @@ export class AuthService {
     return this.http.get(this.apiUrl);
   }
 
-  getByCode(code: any){
+  getByCode(code: string){
     return this.http.get(this.apiUrl + '/' + code);
   }
 
@@ -21,16 +21,15 @@ export class AuthService {
     return this.http.post(this.apiUrl, inputData);
   }
 
-  updateUser(code: any, inputData: any){
+  updateUser(code: string, inputData: any){
     return this.http.put(this.apiUrl+'/'+code, inputData).subscribe( res => {
       this.getAll();
       location.reload();
     });
   }
 
-  deleteUserApi(code:any){
-    return this.http.delete(this.apiUrl+'/'+code).subscribe((res) =>{
-      this.getAll();
+  deleteUserApi(code:string){
+    return this.http.delete(this.apiUrl+'/'+code).subscribe(res =>{
     });
   }
 

@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class UsersComponent implements OnInit {
   users: any;
   user:any;
-  id:any;
+  id:string;
   constructor(private service:AuthService, private builder: FormBuilder, private router:Router){
 
   }
@@ -38,7 +38,7 @@ export class UsersComponent implements OnInit {
   }
 
   //update
-  update(id:any){
+  update(id:string){
     this.service.getByCode(this.getCurrId(id)).subscribe(res => {
       this.user = res;
       console.log(this.user);
@@ -79,9 +79,18 @@ export class UsersComponent implements OnInit {
   getCurrId(id: string){
     return id;
   }
+
+  
+
   //deleteUser
   confirmDelete(){
     this.service.deleteUserApi(this.id);
+    console.log(this.id)
     location.reload();
+  }
+
+  getID(id: string){
+    this.id = id;
+    console.log(this.id);
   }
 }

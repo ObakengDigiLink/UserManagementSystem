@@ -4,7 +4,7 @@
       "id": "Rivaldo",
       "name": "Rivaldo Brazil",
       "password": "Rivaldo@123",
-      "email": "rivaldo@sports.com",
+      "email": "rivaldo@sports.co",
       "title": "Java Developer",
       "branch": "Soshanguve",
       "role": "admin",
@@ -49,26 +49,6 @@
       "branch": "Hollywood",
       "role": "admin",
       "isActive": true
-    },
-    {
-      "id": "Humphrey",
-      "name": "Humphrey Davy",
-      "password": "Humphrey@123",
-      "email": "humphrey@gmail.com",
-      "title": "Electrician",
-      "branch": "London",
-      "role": "",
-      "isActive": false
-    },
-    {
-      "id": "Paxton",
-      "name": "Paxton Davids",
-      "password": "PPaxton@123",
-      "email": "paxton@gmail.com",
-      "title": "Actor",
-      "branch": "Johannesburg",
-      "role": "user",
-      "isActive": false
     }
   ]
 }

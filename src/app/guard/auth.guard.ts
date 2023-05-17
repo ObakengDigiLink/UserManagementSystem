@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { AuthService } from '../service/auth.service';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,8 +16,20 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     
       if(this.service.IsLoggedIn()){
-        // this.router.navigate(['']);
-        return true;
+        if(route.url.length > 0){
+          if(route.url[0].path === 'users'){
+            if(localStorage.getItem('userrole') === 'admin'){
+              return true;
+            }else{
+              this.router.navigate(['']);
+              return false;
+            }
+          }else{
+            return true;
+          } 
+        }else{
+          return true;
+        }
       }else{
         this.router.navigate(['login']);
         return false;
