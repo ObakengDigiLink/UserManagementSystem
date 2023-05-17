@@ -59,6 +59,16 @@
       "branch": "London",
       "role": "admin",
       "isActive": true
+    },
+    {
+      "id": "Michael",
+      "name": "Michael Jordan",
+      "password": "Michael@123",
+      "email": "michael@gmail.com",
+      "title": "Basketballer",
+      "branch": "USA",
+      "role": "",
+      "isActive": false
     }
   ]
 }
