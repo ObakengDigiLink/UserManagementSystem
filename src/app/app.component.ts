@@ -19,12 +19,13 @@ export class AppComponent implements DoCheck, OnInit{
   }
 
   ngOnInit(): void {
-      this.bnIdle.startWatching(15).subscribe((isTimeOut: boolean) =>{
+      this.bnIdle.startWatching(5).subscribe((isTimeOut: boolean) =>{
         if(isTimeOut){
           console.log('session expired');
           localStorage.clear();
+          this.bnIdle.stopTimer;
           this.router.navigate(['login']);
-          this.bnIdle.stopTimer();
+          
         }
       });
   }
