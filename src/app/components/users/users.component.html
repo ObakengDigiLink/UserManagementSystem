@@ -33,14 +33,16 @@
                 data-bs-target="#exampleModal"
                 (click)="update(user.id)"
                 style="color: white !important"
+                *ngIf="hide(user.id)"
               >
-                Update</button
+                Activate</button
               >&nbsp;
               <button
                 class="btn btn-danger"
                 data-bs-toggle="modal"
                 data-bs-target="#deleteUser"
                 (click)="getID(user.id)"
+                *ngIf="hide(user.id)"
               >
                 Delete
               </button>

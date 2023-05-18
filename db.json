@@ -1,6 +1,16 @@
 {
   "user": [
     {
+      "id": "Obakeng",
+      "name": "Obakeng Pitse",
+      "password": "Obakeng@123",
+      "email": "obakeng.op@gmail.com",
+      "title": "System Administrator",
+      "branch": "Pretoria",
+      "role": "admin",
+      "isActive": true
+    },
+    {
       "id": "Rivaldo",
       "name": "Rivaldo Brazil",
       "password": "Rivaldo@123",
@@ -27,7 +37,7 @@
       "email": "peterP@gmail.com",
       "title": "Actor",
       "branch": "Pretoria",
-      "role": "admin",
+      "role": "user",
       "isActive": true
     },
     {
@@ -47,7 +57,7 @@
       "email": "rockyB@gmail.com",
       "title": "Boxer",
       "branch": "Hollywood",
-      "role": "admin",
+      "role": "user",
       "isActive": true
     },
     {
@@ -57,7 +67,7 @@
       "email": "paxton@gmail.com",
       "title": "Actor",
       "branch": "London",
-      "role": "admin",
+      "role": "user",
       "isActive": true
     },
     {

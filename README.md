@@ -6,22 +6,56 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Json server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `json-server --watch db.json` for a dev server. Navigate to `http://localhost:3000/`. To see the user data in the db.json file
 
-## Build
+## User Management System
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The application has
 
-## Running unit tests
+1. Sign in page.
+2. Sign up page.
+3. Landing page (See other users).
+4. Update profile for loggedin user.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Administrative view:
 
-## Running end-to-end tests
+1. View all users.
+2. Modify access rights.
+3. Delete users.
+4. Deactivate/Activate account.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## How to use the application
 
-## Further help
+## Registration & Login
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Users start by registering on the system, then the admin has to activate them and assign them a role before the can login.
+
+## Roles
+
+user or admin
+
+## Views based on roles
+
+## user
+
+They can see other users that have registered on the system, on the home page.
+users can also view and update their own details on the profile page.
+
+## admin
+
+admins can activate and de-activate users and also assign them roles.
+admins can also delete users and update users' data. on the users page
+
+admins can also view and update their profiles on the profile page.
+
+## Admin first time login
+
+The admin must first register on the application, then use the following default admin details:
+
+default admin login details:
+username: `Obakeng` password: `Obakeng@123`
+
+the admin must then activate himself/ herself and assign admin role.
+After getting admin rights the admin can delete the default admin account.

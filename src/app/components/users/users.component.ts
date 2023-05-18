@@ -84,13 +84,22 @@ export class UsersComponent implements OnInit {
 
   //deleteUser
   confirmDelete(){
-    this.service.deleteUserApi(this.id);
-    console.log(this.id)
-    location.reload();
+      this.service.deleteUserApi(this.id);
+      console.log(this.id)
+      location.reload();
   }
 
   getID(id: string){
     this.id = id;
     console.log(this.id);
+  }
+
+  //hide Active button to avoid loggedin admin de-activating themselves
+  hide(id:string){
+    if(id === localStorage.getItem('username')){
+      return false;
+    }else{
+      return true;
+    }
   }
 }
