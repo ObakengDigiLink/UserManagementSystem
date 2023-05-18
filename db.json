@@ -6,7 +6,7 @@
       "password": "Rivaldo@123",
       "email": "rivaldo@sports.co",
       "title": "Java Developer",
-      "branch": "Soshanguve",
+      "branch": "Pretoria",
       "role": "admin",
       "isActive": true
     },
@@ -36,7 +36,7 @@
       "password": "Kevin@123",
       "email": "kevinK@gmail.com",
       "title": "Actor",
-      "branch": "Hollywood",
+      "branch": "Maimi",
       "role": "user",
       "isActive": true
     },

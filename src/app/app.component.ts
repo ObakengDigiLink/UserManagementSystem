@@ -1,19 +1,32 @@
-import { Component, DoCheck } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './service/auth.service';
+import { BnNgIdleService } from 'bn-ng-idle';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements DoCheck{
+export class AppComponent implements DoCheck, OnInit{
   title = 'UserManService';
   isRequired = false;
 
 
-  constructor(private router:Router, private service: AuthService){
-    
+  constructor(private router:Router, 
+    private service: AuthService, 
+    private bnIdle: BnNgIdleService){ 
+  }
+
+  ngOnInit(): void {
+      this.bnIdle.startWatching(15).subscribe((isTimeOut: boolean) =>{
+        if(isTimeOut){
+          console.log('session expired');
+          localStorage.clear();
+          this.router.navigate(['login']);
+          this.bnIdle.stopTimer();
+        }
+      });
   }
 
   ngDoCheck(): void {
